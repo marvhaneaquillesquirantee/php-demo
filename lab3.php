@@ -150,7 +150,18 @@ input[type="submit"]:hover {
 
     echo "<div class='result'>";
 
-    echo "<h3>Account: " . $atm->getAccountName() . "</h3>";
+   echo "<h3>Account: " . $atm->getAccountName() . "</h3>";
+    $actionLabel = "";
+
+    if ($action == "check") {
+    $actionLabel = "Balance Check";
+    } elseif ($action == "deposit") {
+    $actionLabel = "Deposit of $" . $amount;
+    } elseif ($action == "withdraw") {
+    $actionLabel = "Withdrawal of $". $amount;
+    }
+
+echo "<p>Action: " . $actionLabel . "</p>";
 
     if ($action == "check") {
         echo "Current Balance: $" . $atm->getBalance();

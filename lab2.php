@@ -72,7 +72,7 @@ input[type="submit"]:hover {
     <div class="container">
      <form method="post">
         <label>Enter Celsius:</label> 
-        <input type="text" name="temp"> <input type="submit" value="Enter Fahrenheit">
+        <input type="text" name="temperature"> <input type="submit" value="Enter Fahrenheit">
      </form>
 
 
@@ -83,7 +83,7 @@ input[type="submit"]:hover {
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $celsius = $_POST["temp"];
+        $celsius = $_POST["temperature"];
 
         $fahrenheit = celsiusToFahrenheit($celsius);
 
