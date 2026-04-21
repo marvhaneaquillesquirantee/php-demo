@@ -16,6 +16,11 @@
         border-bottom: 2px solid #ff99c8;
     
     }
+     body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f8b9c4;
+}
 
     .navbar a {
         color: #b30059;
